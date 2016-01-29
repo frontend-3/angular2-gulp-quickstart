@@ -1,8 +1,5 @@
 module.exports = function(gulp) {
-    var plugins,
-        argv;
-
-    argv = require('yargs').argv;
+    var plugins;
 
     plugins = {
       notify  : require('gulp-notify'),
@@ -19,7 +16,7 @@ module.exports = function(gulp) {
 
     gulp.task('copy:index', function() {
       return gulp.src([
-        'index.html'
+          'index.html'
         ])
         .pipe(gulp.dest(gulp.config.deploy_routes().base))
         .pipe(plugins.notify(gulp.config.notifyConfig('Copy index')));

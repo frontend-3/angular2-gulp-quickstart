@@ -3,12 +3,10 @@ var settings,
     gulp,
     argv;
 
-argv = require('yargs').argv;
 gulp = require('gulp');
 config = require('./config.js');
 
 require('gulp-simple-load-tasks')(gulp)
-config.setEnv('dev');
 settings = require('./settings/dev');
 
 config.settings = settings;

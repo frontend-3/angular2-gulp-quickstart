@@ -5,7 +5,7 @@ import {TaxDetailService} from '../tax-detail/tax.detail.service'
 
 @Component({
   selector: 'tax-component',
-  templateUrl: 'sueldo-neto/templates/tax/tax-form.html',
+  templateUrl: 'templates/tax/tax-form.html',
   directives: [TaxDetail],
 })
 

@@ -3,7 +3,7 @@ import {TaxComponent} from '../tax/tax.component';
 import {Scale} from '../scale/scale';
 
 @Component({
-  selector: 'sueldo-neto/templates/tax-detail/tax-detail-component',
+  selector: 'templates/tax-detail/tax-detail-component',
   template: `
       <div>Monto afecto: {{taxDetail.amountAfected}}</div>
       <div>Impuestos: {{taxDetail.totalTax}}</div>
