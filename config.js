@@ -4,7 +4,7 @@ var config = {
         base,
         static_path;
 
-    base = '../build/';
+    base = './build/';
     static_path =  base + '/static';
     routes = {
       base : base,
