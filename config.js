@@ -4,32 +4,19 @@ var config = {
         base,
         static_path;
 
-    base = this.settings.root_deploy;
+    base = '../build/';
     static_path =  base + '/static';
     routes = {
       base : base,
       templates: base + '/templates',
       static: static_path,
       styles: static_path + '/styles',
-      images: static_path + '/images',
-      fonts: static_path + '/fonts',
-      videos: static_path + 'videos/',
       scripts: static_path + '/scripts',
-      sprites: static_path + '/sprites'
     }
     return routes;
   },
   static_url: function(url) {
-    if (this.env == 'prod') {
-      return "{{ STATIC_URL }}" + url;
-    }
     return this.settings.static_uri + '/' + url;
-  },
-  setEnv : function (env) {
-    this.env = env;
-  },
-  getEnv: function () {
-    return this.env;
   },
   notifyConfig : function (options) {
       var _config = {}
