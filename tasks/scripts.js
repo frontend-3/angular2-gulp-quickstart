@@ -8,19 +8,17 @@ module.exports = function(gulp) {
     };
 
 
-    tsProject = plugins.createProject('../typings.json');
+    tsProject = plugins.typescript.createProject('./tsconfig.json');
 
     gulp.task('typescript', function() {
-      return gulp.src([
+      var tsResult = tsProject.src([
         '**/*.ts',
         ], {
           cwd : 'static/scripts'
-        })
-        .pipe(plugins.ts(tsProject))
-        .on("error",plugins.notify.onError(function (error) {
-            return "Message to the notifier: " + error.message;
-        }))
-        .pipe(gulp.dest('build/static/scripts'))
+        }).pipe(plugins.typescript(tsProject));
+
+      return
+        tsResult.js.pipe(gulp.dest('build/static/scripts'))
         .pipe(plugins.notify(gulp.config.notifyConfig('Typescript compiled')));
     });
 
