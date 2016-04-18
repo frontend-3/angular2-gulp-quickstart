@@ -1,13 +1,16 @@
 A little example about ng2 with gulp task. For now just works in browser with
 es6 compatibility.
 
-Usage
+Simple Usage
 ====
 
 Install npm packages
 ```shell
 npm install
+
+gulp watch
 ```
+
 
 For copy assets
 ```shell
@@ -24,9 +27,12 @@ For run a static server
 gulp server
 ```
 
-For deploy 
+For deploy
 ```shell
 gulp
 ```
 
-Watch task not yet but this repo will be update
+For simple watch
+```shell
+gulp watch
+```
