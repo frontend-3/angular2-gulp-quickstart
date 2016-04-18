@@ -3,6 +3,7 @@ module.exports = function(gulp) {
     var connect = require('connect');
     var app = connect()
         .use('/', connect.static(gulp.config.deploy_routes().base))
+        .use('/node_modules', connect.static('./node_modules'))
         .use('/templates', connect.static(gulp.config.deploy_routes().templates))
         .use('/static', connect.static(gulp.config.deploy_routes().static));
 
