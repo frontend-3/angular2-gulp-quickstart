@@ -7,6 +7,7 @@
     "concurrently": "^2.0.0",
     "es6-shim": "^0.35.0",
     "gulp": "^3.9.1",
+    "gulp-connect": "^3.2.2",
     "gulp-notify": "^2.2.0",
     "gulp-simple-load-tasks": "^1.0.2",
     "gulp-typescript": "^2.13.0",
