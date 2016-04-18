@@ -1,10 +1,14 @@
 module.exports = function(gulp) {
-    var plugins;
+    var plugins,
+        tsProject;
 
     plugins = {
       typescript : require('gulp-typescript'),
       notify : require('gulp-notify'),
     };
+
+
+    tsProject = plugins.createProject('../typings.json');
 
     gulp.task('typescript', function() {
       return gulp.src([
@@ -12,24 +16,12 @@ module.exports = function(gulp) {
         ], {
           cwd : 'static/scripts'
         })
-        .pipe(plugins.typescript({
-          "target": "ES5",
-          "module": "system",
-          "moduleResolution": "node",
-          "sourceMap": true,
-          "emitDecoratorMetadata": true,
-          "experimentalDecorators": true,
-          "removeComments": true,
-          "noImplicitAny": false
-
-        })
+        .pipe(plugins.ts(tsProject))
         .on("error",plugins.notify.onError(function (error) {
             return "Message to the notifier: " + error.message;
-        })))
+        }))
         .pipe(gulp.dest('build/static/scripts'))
-        .pipe(plugins.notify(gulp.config.notifyConfig('Coffee compiled')));
+        .pipe(plugins.notify(gulp.config.notifyConfig('Typescript compiled')));
     });
-
-
 
 }
