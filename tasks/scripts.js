@@ -11,15 +11,13 @@ module.exports = function(gulp) {
     tsProject = plugins.typescript.createProject('./tsconfig.json');
 
     gulp.task('typescript', function() {
-      var tsResult = tsProject.src([
+      var tsResult = gulp.src([
         '**/*.ts',
         ], {
           cwd : 'static/scripts'
-        }).pipe(plugins.typescript(tsProject));
-
-      return
-        tsResult.js.pipe(gulp.dest('build/static/scripts'))
-        .pipe(plugins.notify(gulp.config.notifyConfig('Typescript compiled')));
+        }).pipe(plugins.typescript(tsProject))
+          .pipe(gulp.dest('build/static/scripts'))
+          .pipe(plugins.notify(gulp.config.notifyConfig('Typescript compiled')));
     });
 
 }
