@@ -12,7 +12,9 @@ Simple Usage
 Install npm packages
 ```shell
 npm install
-
+```
+Run command
+```shell
 gulp watch
 ```
 
