@@ -13,6 +13,11 @@ Install npm packages
 ```shell
 npm install
 ```
+Install typings
+```shell
+typings install
+```
+
 Run command
 ```shell
 gulp watch
