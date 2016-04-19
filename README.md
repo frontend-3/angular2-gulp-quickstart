@@ -3,8 +3,9 @@ A little example about ng2 with gulp task.
 Requirements
 ====
 * NodeJS 0.12.0
-* Typings
-* Gulp
+* Typings (npm install --global typings)
+* Gulp (npm install --global gulp-cli)
+* Notify-send (Only in Linux)
 
 Simple Usage
 ====
