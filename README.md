@@ -1,4 +1,10 @@
-A little example about ng2 with gulp task. Tested with NodeJS 0.12.0
+A little example about ng2 with gulp task.
+
+Requisites
+====
+NodeJS 0.12.0
+Typings
+Gulp
 
 Simple Usage
 ====
