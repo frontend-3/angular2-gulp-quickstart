@@ -45,7 +45,6 @@ For compiling in ES6, follow next steps:
 ```javascript
 "target": "es6"
 ```
-
 2. Comment the next line
 ```typescript
 ///<reference path="../../node_modules/angular2/typings/browser.d.ts"/>
