@@ -1,6 +1,6 @@
 A little example about ng2 with gulp task.
 
-Requisites
+Requirements
 ====
 NodeJS 0.12.0
 Typings
