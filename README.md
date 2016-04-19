@@ -42,13 +42,11 @@ Note
 For compiling in ES6, follow next steps:
 
 1. Change tsconfig.json
-
 ```javascript
 "target": "es6"
 ```
 
 2. Comment the next line
-
 ```typescript
 ///<reference path="../../node_modules/angular2/typings/browser.d.ts"/>
 ```
