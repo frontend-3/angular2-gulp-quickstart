@@ -1,4 +1,4 @@
-A little example about ng2 with gulp task.
+A little example about ng2 with gulp task. Tested with NodeJS 0.12.0
 
 Simple Usage
 ====
