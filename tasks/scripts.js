@@ -7,7 +7,6 @@ module.exports = function(gulp) {
       notify : require('gulp-notify'),
     };
 
-
     tsProject = plugins.typescript.createProject('./tsconfig.json');
 
     gulp.task('typescript', function() {
