@@ -1,0 +1,12 @@
+<form >
+  <label for="">Nombre:</label>
+  <input type="text" required [(ngModel)]="user.name" ngControl="name" #name="ngForm" #elementName>
+  <div>
+    {{elementName.className}}
+  </div>
+  <div [hidden]="name.valid">
+    El campo es inválido
+  </div>
+  <br>
+  <button type="submit" name="button">Enviar</button>
+</form>
